@@ -19,6 +19,10 @@ ENV NODE_ENV development
 # Install Utilities
 RUN apt-get update -q  \
  && apt-get install -yqq \
+ libicu-dev \
+ build-essential \
+ python-dev \
+ python-pip \
  curl \
  git \
  ssh \
@@ -49,7 +53,7 @@ WORKDIR /opt/mean.js
 # when the local package.json file changes.
 # Install npm packages
 COPY package.json /opt/mean.js/package.json
-RUN npm install --quiet && npm cache clean
+RUN npm install --quiet
 
 # Install bower packages
 COPY bower.json /opt/mean.js/bower.json
