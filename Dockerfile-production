@@ -16,6 +16,10 @@ EXPOSE 80 443 3000 35729
 # Install Utilities
 RUN apt-get update -q  \
  && apt-get install -yqq \
+ libicu-dev \
+ build-essential \
+ python-dev \
+ python-pip \
  curl \
  git \
  ssh \
@@ -29,7 +33,7 @@ RUN apt-get update -q  \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Install nodejs
-RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
 RUN sudo apt-get install -yq nodejs \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
