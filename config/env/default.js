@@ -9,7 +9,12 @@ module.exports = {
     showSeoField: true
   },
   db: {
-    promise: global.Promise
+    promise: global.Promise,
+    options: {
+      autoReconnect: true,
+      reconnectTries: 30,
+      keepAlive: true
+    }
   },
   port: process.env.PORT || 3000,
   host: process.env.HOST || '0.0.0.0',
