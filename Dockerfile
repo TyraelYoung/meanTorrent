@@ -41,6 +41,8 @@ RUN sudo apt-get install -yq nodejs \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Use tabao mirror
+RUN npm config set registry https://registry.npm.taobao.org
 # Install MEAN.JS Prerequisites
 RUN npm install --quiet -g gulp bower yo mocha karma-cli pm2
 
