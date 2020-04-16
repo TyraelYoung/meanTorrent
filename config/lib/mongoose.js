@@ -24,7 +24,6 @@ module.exports.connect = function (callback) {
   mongoose.Promise = config.db.promise;
 
   var options = _.merge(config.db.options || {});
-
   mongoose
     .connect(config.db.uri, options)
     .then(function (connection) {
