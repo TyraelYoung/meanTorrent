@@ -25,16 +25,7 @@ services:
      - /opt/mean.js/public
      - /opt/mean.js/uploads
   db:
-    image: mongo:3.6
+    image: mongo:4.2
     restart: always
     ports:
      - "27017:27017"
-    volumes_from:
-      - db-data
-  db-data:
-    image: mongo:3.6
-    volumes:
-      - /data/db
-      - /var/lib/mongodb
-      - /var/log/mongodb
-    entrypoint: /bin/true

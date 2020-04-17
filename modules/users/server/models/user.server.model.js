@@ -734,7 +734,7 @@ UserSchema.index({uptotal: 1});
 
 //for rank list
 //todo mongodb index version does not support numberdecimal
-//UserSchema.index({uploaded: -1, downloaded: -1, ratio: -1, score: -1, status: 1});
+UserSchema.index({uploaded: -1, downloaded: -1, ratio: -1, score: -1, status: 1});
 
 UserSchema.index({created: -1, status: 1});
 UserSchema.index({created: -1, status: 1, roles: 1, isVip: 1});
