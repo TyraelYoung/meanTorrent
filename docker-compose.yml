@@ -11,7 +11,7 @@ services:
      - "35729:35729"
     environment:
      - NODE_ENV=development
-     - DB_1_PORT_27017_TCP_ADDR=db
+     - DB_1_PORT_27017_TCP_ADDR=153.34.1.115:27017
     depends_on:
      - db
     volumes_from:
@@ -24,8 +24,3 @@ services:
      - /opt/mean.js/node_modules
      - /opt/mean.js/public
      - /opt/mean.js/uploads
-  db:
-    image: mongo:4.2
-    restart: always
-    ports:
-     - "27017:27017"
