@@ -133,7 +133,7 @@ module.exports = {
      *      @ids:                             debug user id list
      */
     announce: {
-      url: 'http://localhost:3000/announce',
+      url: 'http://153.34.1.115:3000/announce',
       comment: 'MEAN.im GROUP',
       announceInterval: 60 * 1000 * 10,
       announceInterval_str: '10m',
