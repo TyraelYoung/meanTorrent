@@ -12,8 +12,6 @@ services:
     environment:
      - NODE_ENV=development
      - DB_1_PORT_27017_TCP_ADDR=153.34.1.115:27017
-    depends_on:
-     - db
     volumes_from:
      - web-data
   web-data:
